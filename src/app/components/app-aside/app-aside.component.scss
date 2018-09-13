@@ -1,0 +1,16 @@
+.aside{
+  height: 100vh;
+  background-color: rgb(43,47,62) ;
+  width: 340px;
+  padding: 40px;
+  color: white;
+  .title{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .sub-title{
+    font-size: 18px;
+    color: rgb(128,128,128);
+  }
+}

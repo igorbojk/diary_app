@@ -1,0 +1,44 @@
+
+.list-item{
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 16px 0;
+  position: relative;
+  &:hover{
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      left: -44px;
+      background-color: rgba(255,47,90, .5);
+      width: 6px;
+      bottom: 0;
+      top: 0;
+    }
+  }
+  &.active{
+    &:before{
+      content: '';
+      position: absolute;
+      left: -44px;
+      background-color: rgb(255,47,90);
+      width: 6px;
+      bottom: 0;
+      top: 0;
+    }
+  }
+  .btn{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    .badge{
+      margin-left: 10px;
+    }
+  }
+}

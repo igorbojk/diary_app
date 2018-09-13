@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.flex-container{
+  display: flex;
+  &.no-wrap{
+    flex-wrap: nowrap;
+  }
+}
+
+.card{
+  margin-bottom: 16px;
+}
+.card-title{
+  line-height: 1.25;
+  font-size: 36px;
+  font-weight: 300;
+}
+.btn{
+  font-weight: 600;
+  font-size: 16px;
+}
+.badge-success{
+  background-color: rgb(39,204,192);
+}
+
+.btn-success{
+  color: #fff;
+  background-color: rgb(39,204,192);
+  border-color: rgb(39,204,192);
+}
+.btn-success:hover,
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle{
+  background-color: #0c9187;
+  border-color: #0c9187;
+}
+
+.btn-outline-danger{
+  color: rgb(255,48,90);
+  border-color: rgb(255,48,90);
+}
+.btn-outline-danger:hover,
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.show > .btn-outline-danger.dropdown-toggle{
+  border-color: rgb(255,48,90);
+}
+
+.pl-40{
+  padding-left: 40px;
+}

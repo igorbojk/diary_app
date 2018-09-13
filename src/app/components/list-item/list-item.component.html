@@ -1,0 +1,7 @@
+<div class="list-item flex-container" [ngClass]="{'active': getActiveTodoItemId() == item._id}"  (click)="selectItem(item._id)">
+  <div class="title">
+    <span>{{item.title}}</span>
+    <span class="badge badge-pill badge-success">{{item.comments.length}}</span>
+  </div>
+  <button class="btn btn-outline-danger">Delete</button>
+</div>
