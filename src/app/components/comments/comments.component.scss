@@ -1,0 +1,48 @@
+.card-title {
+  margin-bottom: 26px;
+}
+
+.comments-list{
+  max-height: 60vh;
+  overflow: auto;
+}
+.comment-item {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  &:last-child{
+    border: none
+  }
+  padding: 20px 0 30px 0;
+  &:nth-child(even) {
+    .avatar {
+      background: rgb(255, 138, 0);
+    }
+  }
+  &:nth-child(odd) {
+    .avatar {
+      background: rgb(71, 86, 140);
+    }
+  }
+  .text {
+    width: calc(100% - 66px);
+    font-size: 12px;
+    padding-left: 20px;
+  }
+}
+
+.avatar {
+  width: 66px;
+  height: 66px;
+  background: rgb(230, 230, 230);
+}
+
+.comment-form{
+  margin-top: 8px;
+  display: flex;
+  .form-group{
+    padding-left: 20px;
+  }
+  textarea{
+    resize: none;
+  }
+}

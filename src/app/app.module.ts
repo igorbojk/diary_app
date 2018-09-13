@@ -8,7 +8,9 @@ import { AppContentComponent } from './components/app-content/app-content.compon
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import {TodoListService} from './services/todo-list.service';
-
+import { CommentsComponent } from './components/comments/comments.component';
+import {FormsModule} from '@angular/forms';
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,16 @@ import {TodoListService} from './services/todo-list.service';
     AppAsideComponent,
     AppContentComponent,
     ItemsListComponent,
-    ListItemComponent
+    ListItemComponent,
+    CommentsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    LocalStorageModule.withConfig({
+      prefix: 'diary-app',
+      storageType: 'localStorage'
+    })
   ],
   providers: [
     TodoListService

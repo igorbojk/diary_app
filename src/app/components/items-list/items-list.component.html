@@ -4,15 +4,15 @@
       Items
     </div>
 
-    <form action="" class="flex-container todo-form ">
+    <div class="flex-container todo-form ">
       <div class="form-group mb-2 w-100">
-        <input type="text" class="form-control" placeholder="Type name here...">
+        <input type="text" class="form-control" placeholder="Type name here..." [(ngModel)]="title">
       </div>
-      <button type="submit" class="btn btn-success mb-2">Success</button>
-    </form>
+      <button class="btn btn-success mb-2" (click)="createTodoItem()">Success</button>
+    </div>
     <div class="todo-list">
 
-      <app-list-item *ngFor="let item of listItems" [item]="item"></app-list-item>
+      <app-list-item *ngFor="let item of items" [item]="item"></app-list-item>
 
     </div>
   </div>

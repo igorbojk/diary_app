@@ -14,3 +14,13 @@
     color: rgb(128,128,128);
   }
 }
+
+@media (max-width: 1200px) {
+  .aside{
+    width: 120px;
+    writing-mode: tb-rl;
+    .sub-title{
+      display: none;
+    }
+  }
+}

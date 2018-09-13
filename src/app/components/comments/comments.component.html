@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      Comments #2
+    </div>
+    <div class="comments-list">
+
+      <div class="comment-item" *ngFor="let comment of commentsArray">
+        <div class="avatar">
+
+        </div>
+        <div class="text">
+          {{comment}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="comment-form">
+      <div class="avatar"></div>
+      <div class="form-group w-100">
+        <textarea class="form-control" rows="3" (keyup.control.enter)="addComment()" [(ngModel)]="text"></textarea>
+      </div>
+    </div>
+
+  </div>
+</div>

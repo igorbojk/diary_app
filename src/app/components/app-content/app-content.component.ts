@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoListService} from '../../services/todo-list.service';
 
 @Component({
   selector: 'app-content',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private todoListService: TodoListService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getCurrentItemComments(){
+    return this.todoListService.getActiveTodoItem() ? this.todoListService.getActiveTodoItem().comments : null;
   }
 
 }

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Iitem} from '../../interfaces/item';
+import {TodoListService} from '../../services/todo-list.service';
 
 @Component({
   selector: 'app-items-list',
@@ -8,28 +9,22 @@ import {Iitem} from '../../interfaces/item';
 })
 export class ItemsListComponent implements OnInit {
 
-  public listItems: Array<Iitem> = [
-    {
-      _id: '_555',
-      title: 'First item with custom name',
-      comments: [
-        'aaa',
-        'bbb'
-      ]
-    },
-    {
-      _id: '_666',
-      title: 'Second item is active',
-      comments: [
-        'aaa'
-      ]
-    }
-  ];
 
-  constructor() {
+  public title: String;
+
+  constructor(private todoListService: TodoListService) {
   }
 
   ngOnInit() {
+  }
+
+  get items() {
+    return this.todoListService.getTodoList();
+  }
+
+  createTodoItem() {
+    this.todoListService.createTodoItem(this.title);
+    this.title = null;
   }
 
 }

@@ -17,12 +17,16 @@ export class ListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectItem(id) {
-    this.todoListService.setActiveTodoItemId(id);
+  selectItem() {
+    this.todoListService.setActiveTodoItem(this.item);
   }
 
   getActiveTodoItemId() {
-    return this.todoListService.getActiveTodoItemId();
+    return this.todoListService.getActiveTodoItem() ? this.todoListService.getActiveTodoItem()._id : null;
+  }
+
+  deleteItem() {
+    this.todoListService.deleteItem(this.item._id);
   }
 
 }

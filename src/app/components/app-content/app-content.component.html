@@ -6,10 +6,8 @@
 
     </div>
 
-    <div class="col-md-12 col-lg-6">
-      <div class="card">
-        ds
-      </div>
+    <div class="col-md-12 col-lg-6" *ngIf="getCurrentItemComments()">
+      <app-comments [commentsArray]="getCurrentItemComments()"></app-comments>
     </div>
 
   </div>
